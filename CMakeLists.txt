@@ -1,0 +1,6 @@
+﻿cmake_minimum_required (VERSION 3.8)
+project ("duprm")
+set(CMAKE_CXX_STANDARD 17)
+add_executable (duprm "duprm.cpp")
+find_package(OpenSSL REQUIRED)
+target_link_libraries(duprm PRIVATE OpenSSL::Crypto)
